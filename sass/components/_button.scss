@@ -1,5 +1,5 @@
-
 .btn {
+
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -49,9 +49,35 @@
         transition: ease-out .4s;
         opacity: .2;
     }
-    
+
     &--animated {
         animation: moveFormBottom 1.5s ease-out .5s;
         animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 2px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-3px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
     }
 }
